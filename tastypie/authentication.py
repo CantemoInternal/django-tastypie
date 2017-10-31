@@ -84,7 +84,7 @@ class BasicAuthentication(Authentication):
         except:
             return self._unauthorized()
         
-        bits = user_pass.split(':')
+        bits = user_pass.split(':', 1)
         
         if len(bits) != 2:
             return self._unauthorized()
